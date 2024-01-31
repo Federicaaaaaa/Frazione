@@ -35,7 +35,8 @@ namespace Frazione
         }
         public override string ToString()
         {
-            return string.Format("{0}/{1}", Numeratore, Denominatore);
+            //return string.Format("{0}/{1}", Numeratore, Denominatore);
+             return $"{Numeratore}/{Denominatore}";
         }
         public static Frazione Parse(string fraction)
         {
@@ -43,5 +44,9 @@ namespace Frazione
             return new Frazione(int.Parse(subs[0]), int.Parse(subs[1]));
         }
 
+        public Frazione Somma(Frazione f)
+        {
+            return new Frazione(Denominatore * f.Numeratore + Numeratore * f.Denominatore, f.Denominatore * Denominatore);
+        }
     }
 }

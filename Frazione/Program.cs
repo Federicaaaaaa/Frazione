@@ -10,11 +10,13 @@ namespace Frazione
     {
         static void Main(string[] args)
         {
-            Frazione f = new Frazione(5, 25);
-            Console.WriteLine(f);
+            Frazione f = new Frazione(8, 3);
+           
 
+            Frazione f2= new Frazione(11, 6);
+            Console.WriteLine(f.Somma(f2));
             Frazione fparse = Frazione.Parse(f.ToString());
-            Console.WriteLine(fparse);
+            //Console.WriteLine(fparse);
 
             Console.ReadLine();
         }
