@@ -50,7 +50,7 @@ namespace Frazione
             return new Frazione(Denominatore * f.Numeratore + Numeratore * f.Denominatore, f.Denominatore * Denominatore);
         }
 
-        public bool TryParse(string s, out Frazione v)
+        public static bool TryParse(string s, out Frazione v)
         {
             String[] parts = s.Split('/');
             if(parts.Length != 2 )
